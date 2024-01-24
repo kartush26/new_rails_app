@@ -6,11 +6,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
   private
 
   def respond_with(current_user, _opts = {})
-  
     if resource.persisted?
-
       render json: {
-        
         status: {code: 200, message: 'Signed up successfully.',
         data: { user: current_user }
         }

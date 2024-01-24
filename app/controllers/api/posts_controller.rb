@@ -20,7 +20,7 @@ class Api::PostsController < ApplicationController
         render json: @post, status: :created
       else
 
-        render json: post.errors, status: :unprocessable_entity
+        render json: @post.errors, status: :unprocessable_entity
       end
     end
   
