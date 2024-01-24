@@ -30,6 +30,8 @@ class Api::PostsController < ApplicationController
     end
   
     def destroy
+
+      
       @post.destroy
       head :no_content
     end

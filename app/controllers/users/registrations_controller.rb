@@ -12,6 +12,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
         data: { user: current_user }
         }
       },status: :ok
+    
     else
       render json: {
         status: {message: "User couldn't be created successfully. #{current_user.errors.full_messages.to_sentence}"}
